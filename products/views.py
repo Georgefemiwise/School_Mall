@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'products\index.html')
+    return render(request, 'products/index.html')
 
 
 def blog(request):
