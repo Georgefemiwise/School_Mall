@@ -1,2 +1,3 @@
-# Small
-school mall {small
+# Seemall
+
+seemall an open sources ecomm project.
