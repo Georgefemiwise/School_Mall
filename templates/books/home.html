@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<form action="/add/" method="post" class="form">
+	{% csrf_token %}
+	<div class="form-control">
+		{{ form.title.label }}
+		{{ form.title|attr:"placeholder:title"|add_class:"" }}
+	</div>
+
+	<div class="form-control">
+		{{ form.author.label }}
+		{{ form.author|attr:"placeholder:author"|add_class:"" }}
+	</div>
+
+	<div class="form-control">
+		{{ form.genre.label }}
+		{{ form.genre|attr:"placeholder:genre"|add_class:"" }}
+	</div>
+
+	<div class="form-control">
+		{{ form.publisher.label }}
+		{{ form.publisher|attr:"placeholder:publisher"|add_class:"" }}
+	</div>
+
+	<div class="form-control">
+		{{ form.publication_date.label }}
+		{{ form.publication_date|attr:"placeholder:publication_date"|add_class:"" }}
+	</div>
+
+
+	<button type="submit">Submit</button>
+</form>
+{% endblock content %}

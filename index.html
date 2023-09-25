@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<title>Document</title>
+	</head>
+
+	<style>
+		.form-control {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.form-control label {
+			font-size: larger;
+			text-transform: capitalize;
+			margin-top: 5px;
+		}
+
+		input {
+			border-radius: 4px;
+			padding: 5px 10px;
+			outline: darkorange solid 1px;
+			border: none;
+			width: 100%;
+		}
+
+		form {
+			max-width: 70%;
+			border: solid 1px black;
+			padding: 7em 4em;
+
+		}
+
+		body {
+			display: flex;
+
+			justify-content: center;
+			align-items: center;
+
+			height: 90vh;
+			background: #c9c2ed;
+		}
+	</style>
+
+	<body>
+		<form action="">
+			<div class="form-control">
+				<label for="">label</label>
+				<input type="text">
+			</div>
+			<div class="form-control">
+				<label for="">label</label>
+				<input type="text">
+			</div>
+			<div class="form-control">
+				<label for="">label</label>
+				<input type="text">
+			</div>
+		</form>
+
+	</body>
+
+</html>
