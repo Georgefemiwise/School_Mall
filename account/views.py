@@ -53,3 +53,8 @@ def loginUser(request):
             return redirect('login')
     else:
         return render(request, 'account/login.html')
+
+def logoutUser(request):
+    if request.method == "POST":
+        # logout(request, User)
+        pass

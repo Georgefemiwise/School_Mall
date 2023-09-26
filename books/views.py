@@ -4,7 +4,7 @@ from .forms import BookForms
 
 def index(request):
 
-    return render(request, "books/index.html")
+    return render(request, "index.html")
 
 def sayHi(request):
     form = BookForms()

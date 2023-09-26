@@ -1,22 +1,55 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>html,
+body {
+  height: 100%;
+}
 
-<div>
-<h2>Login</h2>
-<form method="post">
-	{% csrf_token %}
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
 
-	<label for="username">Username:</label>
-	<input type="text" id="username" name="username" required>
-	<br><br>
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
 
-	<label for="password">Password:</label>
-	<input type="password" id="password" name="password" required>
-	<br><br>
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
-	<button type="submit">Login</button>
-</form>
-<p>dont have an account? <a href="{% url 'register'%}">register</a></p>
-</div>
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+</style>
+
+
+<main class="form-signin w-100 m-auto">
+
+	<form method="post">
+		{% csrf_token %}
+		<h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+		<div class="form-floating">
+			<input type="text" class="form-control" id="floatingInput" placeholder="username">
+			<label for="floatingInput">Username</label>
+		</div>
+		<div class="form-floating">
+			<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+			<label for="floatingPassword">Password</label>
+		</div>
+
+		<button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+		<div class="form-check text-start my-3">
+
+			<p>dont have an account? <a href="{% url 'register'%}">register</a></p>
+		</div>
+	
+	</form>
+</main>
 {% endblock content %}
