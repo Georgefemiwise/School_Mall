@@ -1,6 +1,6 @@
 [
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "To Kill a Mockingbird",
@@ -12,7 +12,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "1984",
@@ -24,7 +24,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "Pride and Prejudice",
@@ -36,7 +36,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "The Great Gatsby",
@@ -48,7 +48,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "The Hobbit",
@@ -60,7 +60,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "Harry Potter and the Philosopher's Stone",
@@ -72,7 +72,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "The Catcher in the Rye",
@@ -84,7 +84,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
@@ -96,7 +96,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "Brave New World",
@@ -108,7 +108,7 @@
 		}
 	},
 	{
-		"model": "books.book",
+		"model": "book_manager.book",
 
 		"fields": {
 			"title": "The Lord of the Rings: The Fellowship of the Ring",

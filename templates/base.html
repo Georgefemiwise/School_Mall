@@ -10,7 +10,6 @@
 
 		<title>Books</title>
 
-
 		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	</head>
 
@@ -20,8 +19,8 @@
 
 		{% if request.user.is_authenticated %}
 		<nav class="navbar navbar-expand-md bg-body-tertiary " aria-label=" navbar ">
-			<div class="container flex  align-items-center align-middle">
-				<a class="navbar-brand" href="#" data-bs-toggle="collapse">-Lib</a>
+			<div class="container d-flex  align-items-baseline ">
+				<a class="navbar-brand" href="#" data-bs-toggle="collapse">Lib</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -33,9 +32,9 @@
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="{%url 'books' %}">Home</a>
 						</li>
-						<!-- <li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
-							</li> -->
+						<li class="nav-item">
+								<a class="nav-link" href="#">Profle</a>
+							</li>
 						<!-- <li class="nav-item">
 								<a class="nav-link disabled" aria-disabled="true">Disabled</a>
 							</li> -->
@@ -49,13 +48,15 @@
 								</ul>
 							</li> -->
 					</ul>
-					<div>
-						<div class="bg-info border "
+					<div class="d-flex align-items-center">
+						Hi {{ request.user.username }}
+						<div class="bg-info border mx-1"
 							style="border-radius: 100%;height: 40px; width: 40px; display: flex;justify-content: center; align-items: center; text-transform: uppercase;">
 							{{ request.user.username|slice:"1" }}
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</nav>
 		{% else %}

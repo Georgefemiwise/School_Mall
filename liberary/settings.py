@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     
     # local apps
     'account',
-    'books',
+    'book_manager',
     
     # installs
     'widget_tweaks',
