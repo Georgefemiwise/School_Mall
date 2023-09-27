@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-qjkt3_=202r5uaz-r9lb7bi8nq@8wml@@y2d%&s^darim(=-$!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -89,6 +90,20 @@ DATABASES = {
 }
 
 
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'WXj6bUO2WtppPpZTLqLZ',
+        'HOST': 'containers-us-west-93.railway.app',
+        'PORT': '5512',
+    }
+}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -132,3 +147,7 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
