@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import BookForms
+from .models import Book
 
 
 def index(request):
@@ -13,21 +14,9 @@ def sayHi(request):
 
 
 def book(request):
-    if request.method == "POST":
-        print('hello')
-    return render(request, "books/books.html", )
+    all_books = Book.objects.all()
+    context ={"books" : all_books}
+    
+        
+    return render(request, "books/books.html", context)
 
-def add_book(request):
-    if request.method == "POST":
-        print('hello')
-    return render(request, "books/books.html", )
-
-def delete_book(request,id):
-    if request.method == "POST":
-        print('hello')
-    return render(request, "books/books.html", )
-
-def update_book(request, id):
-    if request.method == "POST":
-        print('hello')
-    return render(request, "books/books.html", )

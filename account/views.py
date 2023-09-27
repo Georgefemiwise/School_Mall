@@ -44,9 +44,7 @@ def loginUser(request):
 
         if user is not None:
             login(request, user)
-            fname = user.first_name
-            lname = user.last_name
-            return render(request, 'books/index.html', {"name": f"{fname} {lname}"})
+            return redirect( '/books')
 
         else:
             messages.info(request, 'invalid credentials')
@@ -55,6 +53,7 @@ def loginUser(request):
         return render(request, 'account/login.html')
 
 def logoutUser(request):
-    if request.method == "POST":
-        # logout(request, User)
-        pass
+    
+    logout(request)
+    return redirect('/')
+        

@@ -1,0 +1,122 @@
+[
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "To Kill a Mockingbird",
+			"author": "Harper Lee",
+			"genre": "Fiction",
+			"publisher": "Harper Perennial",
+			"publication_date": "1960-07-11",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "1984",
+			"author": "George Orwell",
+			"genre": "Dystopian",
+			"publisher": "Penguin Books",
+			"publication_date": "1949-06-08",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "Pride and Prejudice",
+			"author": "Jane Austen",
+			"genre": "Romance",
+			"publisher": "T. Egerton, Whitehall",
+			"publication_date": "1813-01-28",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "The Great Gatsby",
+			"author": "F. Scott Fitzgerald",
+			"genre": "Fiction",
+			"publisher": "Charles Scribner's Sons",
+			"publication_date": "1925-04-10",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "The Hobbit",
+			"author": "J.R.R. Tolkien",
+			"genre": "Fantasy",
+			"publisher": "George Allen & Unwin",
+			"publication_date": "1937-09-21",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "Harry Potter and the Philosopher's Stone",
+			"author": "J.K. Rowling",
+			"genre": "Fantasy",
+			"publisher": "Bloomsbury",
+			"publication_date": "1997-06-26",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "The Catcher in the Rye",
+			"author": "J.D. Salinger",
+			"genre": "Fiction",
+			"publisher": "Little, Brown and Company",
+			"publication_date": "1951-07-16",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+			"author": "C.S. Lewis",
+			"genre": "Fantasy",
+			"publisher": "Geoffrey Bles",
+			"publication_date": "1950-10-16",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "Brave New World",
+			"author": "Aldous Huxley",
+			"genre": "Dystopian",
+			"publisher": "Chatto & Windus",
+			"publication_date": "1932-10-27",
+			"available": true
+		}
+	},
+	{
+		"model": "books.book",
+
+		"fields": {
+			"title": "The Lord of the Rings: The Fellowship of the Ring",
+			"author": "J.R.R. Tolkien",
+			"genre": "Fantasy",
+			"publisher": "George Allen & Unwin",
+			"publication_date": "1954-07-29",
+			"available": true
+		}
+	}
+]

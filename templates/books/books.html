@@ -1,6 +1,50 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
-<h1>hello books</h1>
+
+
+
+<h4 class="text-mute text-center text-capitalize">Hello, {{request.user.username}}</h4>
+<p class="text-sm font-weight-light text-center">Chose a book to borrow</p>
+
+<div class="container">
+
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 g-4">
+
+		{% for book in books %}
+
+		<div class="col bg-hover" style="max-width: 30rem; ">
+			<div class="border border-dark-subtle p-3  shadow-sm  bg-body-tertiary rounded">
+				<p class="text-danger text-capitalize fw-light" style="font-size: 10px;">{{ book.genre }}</p>
+				<h3 class="fw-bolder text-capitalize text-truncate">{{ book.title }}</h3>
+				<p class="subtitle mb-2 text-muted">
+					by <span class="fw-bold text-capitalize">{{ book.author }}</span>
+				</p>
+				<div class="text-mute fs-6 d-flex justify-content-between">
+					<p class="text-mute fw-light" style="font-size: 10px;">Published: {{book.publication_date}} by
+						{{book.published}} </p>
+					<p class="text-mute fw-light d-flex align-items-center" style="font-size: 10px;">
+						Available:
+						{% if book.available %}
+						<svg width="10" height="10" fill="green" class="bi bi-check-circle-fill mx-1"
+							viewBox="0 0 16 16">
+							<path
+								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+						</svg>
+						{% else %}
+						<svg width="10" height="10" fill="red" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+							<path
+								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+						</svg>
+						{% endif %}
+					</p>
+				</div>
+
+			</div>
+		</div>
+
+		{% endfor %}
+	</div>
+</div>
+
+
 {% endblock content %}
