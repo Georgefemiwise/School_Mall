@@ -33,9 +33,7 @@ def registerUser(request):
 
     else:
         return render(request, 'account/register.html')
-        
-        
-        
+         
 def loginUser(request):
     if request.method == 'POST':
 

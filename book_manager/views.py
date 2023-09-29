@@ -4,7 +4,6 @@ from .models import Book
 
 
 def index(request):
-
     return render(request, "index.html")
 
 def sayHi(request):
@@ -16,7 +15,5 @@ def sayHi(request):
 def book(request):
     all_books = Book.objects.all()
     context ={"books" : all_books}
-    
-        
     return render(request, "books/books.html", context)
 
