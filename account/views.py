@@ -24,18 +24,20 @@ def registerUser(request):
             else:
                 User.objects.create_user(username=username, email=email, first_name=first_name, last_name=last_name, password=password1)
                 User.save
+                messages.success(request, f"{User.username} created successfully")
                 return redirect('login')
-
     
         else:
             messages.info(request,'Password not the same!')
+            return redirect('register')
 
     else:
         return render(request, 'account/register.html')
         
+        
+        
 def loginUser(request):
     if request.method == 'POST':
-
 
         username =request.POST['username']
         password =request.POST['password']
@@ -44,7 +46,8 @@ def loginUser(request):
 
         if user is not None:
             login(request, user)
-            return redirect( '/books')
+            messages.success(request, "Login successful")
+            return redirect( '/books/')
 
         else:
             messages.info(request, 'invalid credentials')
@@ -53,7 +56,6 @@ def loginUser(request):
         return render(request, 'account/login.html')
 
 def logoutUser(request):
-    
     logout(request)
     return redirect('/')
         
