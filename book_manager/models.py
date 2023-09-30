@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=100)
-    cover = models.ImageField(upload_to='images/')
+    # cover = models.ImageField(upload_to='images/')
     genre = models.CharField(max_length=100)
     publisher = models.CharField(max_length=100)
     publication_date = models.DateField()
